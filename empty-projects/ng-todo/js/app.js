@@ -1,4 +1,4 @@
-var ngTodo = angular.module('ngTodo', [])
+var ngTodo = angular.module('ngTodo', ['StupidDirectives', 'StupidFilters'])
     .config(function() {
 
     });

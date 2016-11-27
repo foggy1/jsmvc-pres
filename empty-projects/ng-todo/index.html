@@ -23,7 +23,7 @@
           <i class="glyphicon glyphicon-list-alt"></i>
         </span>
         <input ng-model="newTask" placeholder="New Todo" class="form-control" type="text"><!-- model  -->
-        {{ newTask | uppercase }}
+        {{ newTask | altCaps }}
         <span class="input-group-btn">
           <button ng-click="addNewTask()" class="btn btn-success" type="button"><!-- click  -->
             <i class="glyphicon glyphicon-plus"></i>
@@ -37,7 +37,7 @@
         </span>
         <input ng-model="todo.val" ng-class="{ finished: todo.completed }" class="form-control" type="text"><!-- model / class  -->
         <span class="input-group-btn">
-          <button ng-click="removeTodo($index)" class="btn btn-danger" type="button"><!-- click  -->
+          <button complete-color="todo.completed" ng-click="removeTodo($index)" class="btn btn-danger" type="button"><!-- click  -->
             <i ng-show="todo.completed" class="glyphicon glyphicon-remove"></i>
           </buttohttps://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.jsn>
         </span>
