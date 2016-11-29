@@ -3,7 +3,15 @@ window.TodoView = Backbone.View.extend({
         this.model.on('change', this.render, this);
     },
     events: {
-        'change input[type=checkbox]' : 'toggle'
+        'change input[type=checkbox]' : 'toggle',
+        'change .form-control' : 'update',
+        'click .btn-danger' : 'remove'
+    },
+    update: function () {
+        this.model.updateText(this.$('.form-control').val());
+    },
+    remove: function () {
+        this.model.destroy();
     },
     toggle: function () {
         this.model.toggle();
