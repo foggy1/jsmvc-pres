@@ -1,1 +1,1 @@
-$(function () { TodoApp.start() });
+$(function () { TodoApp.start(); });
