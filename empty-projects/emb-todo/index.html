@@ -33,7 +33,7 @@
         </div>
         <!-- each -->
         {{#each itemController="todo" }}
-          {{todo-entry val=val completed=completed}}
+          {{todo-entry val=val completed=completed remove="removeTodo"}}
         {{/each }}
         <!-- /each -->
 
@@ -53,7 +53,7 @@
 
       {{input classNameBindings=":form-control completed:finished" value=val}} <!-- value classNameBindings -->
       <span class="input-group-btn">
-        <button class="btn btn-danger" type="button"> <!-- action -->
+        <button class="btn btn-danger" type="button" {{action "click"}}> <!-- action -->
           <i class="glyphicon glyphicon-remove"></i>
         </button>
       </span>
